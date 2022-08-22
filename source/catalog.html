@@ -9,44 +9,40 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header main-header--opened">
-    <a href="index.html">
-      <img class="main-header__logo" src="img/logo.png" width="185" height="96" alt="Город Седона">
-    </a>
-    <div class="main-header__dropdown">
-      <nav class="main-header__main-nav main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a class="site-list__link" href="index.html">
-                Главная
-              </a>
+  <header class="main-header">
+    <div class="main-header__wrapper">
+      <div class="main-header__logo">
+        <a class="main-header__logo-link">
+          <img class="main-header__logo-img" width="185" height="96" src="img/logo.png" alt="Логотип города Седона." />
+        </a>
+      </div>
+
+      <button class="main-header__toggle main-header__toggle--closed" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+
+      <div class="main-header__dropdown">
+        <nav class="-main-header__nav main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
             </li>
-            <li class="site-list__item site-list__item--active">
-              <a class="site-list__link">
-                Фото и видео
-              </a>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--current">Фото и видео</a>
             </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="form.html">
-                Форма отзыва
-              </a>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Форма отзыва</a>
             </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--gradient" href="https://htmlacademy.ru/intensive/adaptive">
-                HTML Academy
-              </a>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             </li>
           </ul>
-        </div>
-      </nav>
+        </nav>
+      </div>
+    </div>
   </header>
-  <div class="slogan-index">
-    <img class="slogan-index__image" src="img/SEDONA.svg" width="282" height="214"
-      alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks.">
+  <div class="slogan-inner">
+    <img class="slogan-inner__image" src="img/sedona.svg" width="282" height="158">
   </div>
   <main class="main-container">
     <h1 class="visually-hidden">Фото и видео</h1>
@@ -59,21 +55,22 @@
       </div>
       <div class="gallery__wrapper">
         <ul class="gallery__list">
-          <li class="gallery__post post">
-            <figure class="post__content">
-              <a class="post__link">
-                <img class="post__image" src="img/photo-1-mobile.jpg" width="280" height="280"
-                  alt="Изображение дороги на закате солнца"></a>
-              <figcaption class="post__text">
-                <div class="post__description">
+          <li class="gallery__post post post--popular">
+            <div class="post__content">
+            <a class="post__link">
+              <img class="post__image" src="img/photo-1-mobile.jpg" width="280" height="280"
+                alt="Изображение дороги на закате солнца"></a>
+            <div class="post__description">
+              <div class="post__text-box">
+                <div class="post__text">
                   <h3 class="post__title">
                     Неродные просторы
                   </h3>
                   <p class="post__author">Автор фото: Борис</p>
                 </div>
-                <div class="post__like like">
+                <div class="post__like">
                   <a class="post__like-link" href="#">
-                    <div class="like__icon">
+                    <div class="post__like-icon">
                       <svg aria-hidden="true" focusable="false" width="23" height="21" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path opacity=".3"
@@ -84,17 +81,18 @@
                   </a>
                   <span class="post__like-count">1350</span>
                 </div>
-              </figcaption>
-            </figure>
-
+              </div>
+            </div>
+</div>
           </li>
           <li class="gallery__post post">
-            <figure class="post__content">
-              <a class="post__link">
-                <img class="post__image" src="img/photo-2-mobile.jpg" width="280" height="280"
-                  alt="Изображение кактуса с желтыми цветами"></a>
-              <figcaption class="post__text">
-                <div class="post__description">
+            <div class="post__content">
+            <a class="post__link">
+              <img class="post__image" src="img/photo-2-mobile.jpg" width="280" height="280"
+                alt="Изображение кактуса с желтыми цветами"></a>
+            <div class="post__description">
+              <div class="post__text-box">
+                <div class="post__text">
                   <h3 class="post__title">
                     Местная растительность
                   </h3>
@@ -102,7 +100,7 @@
                 </div>
                 <div class="post__like like">
                   <a class="post__like-link" href="#">
-                    <div class="like__icon">
+                    <div class="post__like-icon">
                       <svg aria-hidden="true" focusable="false" width="23" height="21" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path opacity=".3"
@@ -113,17 +111,18 @@
                   </a>
                   <span class="post__like-count">143</span>
                 </div>
-              </figcaption>
-            </figure>
-
+              </div>
+            </div>
+            </div>
           </li>
           <li class="gallery__post post">
-            <figure class="post__content">
-              <a class="post__link">
-                <img class="post__image" src="img/photo-3-mobile.jpg" width="280" height="280"
-                  alt="Изображение дороги в горах"></a>
-              <figcaption class="post__text">
-                <div class="post__description">
+            <div class="post__content">
+            <a class="post__link">
+              <img class="post__image" src="img/photo-3-mobile.jpg" width="280" height="280"
+                alt="Изображение дороги в горах"></a>
+            <div class="post__description">
+              <div class="post__text-box">
+                <div </div class="post__text">
                   <h3 class="post__title">
                     Дорога на Север
                   </h3>
@@ -131,7 +130,7 @@
                 </div>
                 <div class="post__like like">
                   <a class="post__like-link" href="#">
-                    <div class="like__icon">
+                    <div class="post__like-icon">
                       <svg aria-hidden="true" focusable="false" width="23" height="21" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path opacity=".3"
@@ -142,17 +141,17 @@
                   </a>
                   <span class="post__like-count">96</span>
                 </div>
-              </figcaption>
-            </figure>
-
+              </div>
+            </div>
+</div>
           </li>
           <li class="gallery__post post">
-            <figure class="post__content">
-              <a class="post__link">
-                <img class="post__image" src="img/photo-4-mobile.jpg" width="280" height="280"
-                  alt="Изображение гор"></a>
-              <figcaption class="post__text">
-                <div class="post__description">
+            <div class="post__content">
+            <a class="post__link">
+              <img class="post__image" src="img/photo-4-mobile.jpg" width="280" height="280" alt="Изображение гор"></a>
+            <div class="post__description">
+              <div class="post__text-box">
+                <div </div class="post__text">
                   <h3 class="post__title">
                     Мост Дьявола
                   </h3>
@@ -160,7 +159,7 @@
                 </div>
                 <div class="post__like like">
                   <a class="post__like-link" href="#">
-                    <div class="like__icon">
+                    <div class="post__like-icon">
                       <svg aria-hidden="true" focusable="false" width="23" height="21" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path opacity=".3"
@@ -171,8 +170,9 @@
                   </a>
                   <span class="post__like-count">254</span>
                 </div>
-              </figcaption>
-            </figure>
+              </div>
+            </div>
+            </div>
           </li>
         </ul>
       </div>
@@ -190,6 +190,7 @@
     <div class="main-footer__wrapper">
       <div class="main-footer__tag">
         <a class="main-footer__link" href="https://twitter.com/hashtag/visitsedona">
+          #VISITSEDONA
         </a>
       </div>
       <div class="main-footer__social social">

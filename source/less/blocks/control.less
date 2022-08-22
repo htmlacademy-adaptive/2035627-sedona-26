@@ -1,0 +1,22 @@
+.control {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.control__item {
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    margin-right: 28px;
+  }
+}
+
+.control__label {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.44;
+}
