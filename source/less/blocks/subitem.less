@@ -1,75 +1,81 @@
 .subitem {
-.list-reset();
-padding: 30px 20px 32px 65px;
-text-align: start;
-background-color: @white;
-color: @black;
-list-style: none;
+  .list-reset();
+  padding: 30px 20px 32px 65px;
+  text-align: start;
+  background-color: @white;
+  color: @black;
+  list-style: none;
 
-@media (min-width: @tablet-width) {
-  padding-bottom: 36px;
-  padding-top: 158px;
-  padding-left: 27px;
-  padding-right: 27px;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+  @media (min-width: @tablet-width) {
+      padding-bottom: 36px;
+      padding-top: 158px;
+      padding-left: 27px;
+      padding-right: 27px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+      padding-left: 45px;
+      padding-right: 45px;
+      padding-bottom: 57px;
+  }
 }
 
-@media (min-width: @desktop-width){
-  padding-left: 45px;
-  padding-right: 45px;
-  padding-bottom: 57px;
-}
-}
 .subitem__item {
-position: relative;
-margin-bottom: 30px;
-display: flex;
-flex-direction: column;
-
-@media (min-width: @tablet-width) {
+  position: relative;
+  margin-bottom: 30px;
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  flex: 0 0 200px;
+
+  @media (min-width: @tablet-width) {
+      flex-direction: column;
+      align-items: center;
+      flex: 0 0 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+      flex: 0 0 313px;
+  }
 }
 
-@media (min-width: @desktop-width) {
-  flex: 0 0 313px;
-}
-}
 .subitem__title {
-  @media (min-width: @tablet-width){
-    font-size: 21px;
-    line-height: 1.23;
+  @media (min-width: @tablet-width) {
+      font-size: 21px;
+      line-height: 1.23;
   }
 }
-.subitem__description {
- color: @light-black;
-  @media (min-width:@tablet-width){
-  text-align: center;
-  }
-}
-.subitem__item--housing::before {
-content: "";
-position: absolute;
-left: -47px;
-top: 10px;
-background-image: url(../img/icon-house.svg);
-background-repeat: no-repeat;
-width: 39px;
-height:37px;
 
-@media (min-width: @tablet-width) {
-  width:75px;
-  height:72px;
-  top:-50px;
-  left: 95px;
-  scale: 2;
+.subitem__description {
+  color: @light-black;
+
+  @media (min-width:@tablet-width) {
+      text-align: center;
+  }
 }
-@media (min-width: @desktop-width) {
-left: 156px;
-}
+
+.subitem__item--housing::before {
+  content: "";
+  position: absolute;
+  left: -47px;
+  top: 10px;
+  background-image: url(../img/icon-house.svg);
+  background-repeat: no-repeat;
+  width: 39px;
+  height: 37px;
+
+  @media (min-width: @tablet-width) {
+      width: 75px;
+      height: 72px;
+      top: -50px;
+      left: 95px;
+      scale: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+      left: 156px;
+  }
 }
 
 .subitem__item--food::before {
@@ -80,37 +86,40 @@ left: 156px;
   background-image: url(../img/icon-burger.svg);
   background-repeat: no-repeat;
   width: 39px;
-  height:37px;
+  height: 37px;
 
   @media (min-width: @tablet-width) {
-    width:75px;
-    height:72px;
-    top:-50px;
-    left: 95px;
-    scale: 2;
-  }
-  @media (min-width: @desktop-width) {
-    left: 156px;
-    }
-  }
-  .subitem__item--gift::before {
-    content: "";
-    position: absolute;
-    left: -47px;
-    top: 10px;
-    background-image: url(../img/icon-gift.svg);
-    background-repeat: no-repeat;
-    width: 39px;
-    height:37px;
-
-    @media (min-width: @tablet-width) {
-      width:75px;
-      height:72px;
-      top:-50px;
+      width: 75px;
+      height: 72px;
+      top: -50px;
       left: 95px;
       scale: 2;
-    }
-    @media (min-width: @desktop-width) {
+  }
+
+  @media (min-width: @desktop-width) {
       left: 156px;
-      }
-    }
+  }
+}
+
+.subitem__item--gift::before {
+  content: "";
+  position: absolute;
+  left: -47px;
+  top: 10px;
+  background-image: url(../img/icon-gift.svg);
+  background-repeat: no-repeat;
+  width: 39px;
+  height: 37px;
+
+  @media (min-width: @tablet-width) {
+      width: 75px;
+      height: 72px;
+      top: -50px;
+      left: 95px;
+      scale: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+      left: 156px;
+  }
+}
