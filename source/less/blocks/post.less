@@ -2,34 +2,32 @@
   padding-top: 24px;
 
   &::after {
-      content: "";
-      display: block;
-      background-color: #E5E5E5;
-      height: 1px;
-      width: 100%;
-      padding: 0;
-      margin: 0;
+    content: "";
+    display: block;
+    background-color: @grey;
+    height: 1px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 
-      @media (min-width: @tablet-width) {
-          display: none;
-      }
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
   }
 
   @media (min-width: @tablet-width) {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      background-color: @form-grey;
-      padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: @form-grey;
+    padding: 0;
   }
-
-  @media (min-width: @desktop-width) {}
 }
 
 .post--popular {
   @media (min-width: @tablet-width) {
-      grid-column: 1/-1;
-      grid-row: 1/2;
+    grid-column: 1/-1;
+    grid-row: 1/2;
   }
 }
 
@@ -45,38 +43,38 @@
   width: 100%;
 
   @media (min-width: @tablet-width) {
-      grid-column: 1/-1;
+    grid-column: 1/-1;
   }
 
   @media (min-width: @desktop-width) {
-      min-height: 260px;
-      grid-row: 1/3;
+    min-height: 260px;
+    grid-row: 1/3;
   }
 }
 
 .post__text {
   @media (min-width: @tablet-width) {
-      padding-left: 20px;
+    padding-left: 20px;
   }
 }
 
 .post__text-box {
   @media (min-width: @tablet-width) {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-right: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 27px;
   }
 
   @media (min-width: @desktop-width) {
-      color: @white;
-      position: absolute;
-      width: 100%;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.3);
-      padding-top: 22px;
-      padding-bottom: 15px;
-      padding-right: 20px;
+    color: @white;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding-top: 22px;
+    padding-bottom: 15px;
+    padding-right: 20px;
   }
 }
 
@@ -98,8 +96,8 @@
   display: flex;
   margin-bottom: 25px;
 
-  @media (min-width:@tablet-width) {
-      margin: 0;
+  @media (min-width: @tablet-width) {
+    margin: 0;
   }
 }
 
@@ -115,14 +113,14 @@
 
 .post__like-icon path {
   @media (min-width: @desktop-width) {
-      fill: @white;
-      opacity: 1;
+    fill: @white;
+    opacity: 1;
   }
 }
 
-post--popular .post__image {
+.post--popular .post__image {
   @media (min-width: @tablet-width) {
-      min-height: 400px;
-      width: 100%;
+    min-height: 400px;
+    width: 100%;
   }
 }
