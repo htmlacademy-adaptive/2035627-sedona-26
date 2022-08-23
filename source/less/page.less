@@ -1,9 +1,26 @@
+html {
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
+  font-size: @font-size-base;
   font-family: @font-family-base;
   text-transform: @text-transform-base;
   margin: 0;
   padding: 0;
 }
+
+@media (min-width: @desktop-width) {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 
 .visually-hidden {
   position: absolute;
