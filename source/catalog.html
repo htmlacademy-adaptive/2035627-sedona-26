@@ -6,14 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Фото и видео</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/32.svg" />
+  <link rel="icon" href="img/152.svg" type="image/svg+xml" />
+  <link rel="manifest" href="manifest.webmanifest" />
 </head>
 
 <body class="page__body">
+  <svg style="display: none">
+    <symbol viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-like">
+      <path opacity="0.3" d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"
+      fill="black"/>
+    </symbol>
+  </svg>
   <header class="main-header">
     <div class="main-header__wrapper">
       <div class="main-header__logo">
         <a class="main-header__logo-link">
-          <img class="main-header__logo-img" width="185" height="96" src="img/logo.png" alt="Логотип города Седона." />
+          <img class="main-header__logo-img" width="185" height="96" src="img/logo.svg" alt="Логотип города Седона." />
         </a>
       </div>
 
@@ -58,8 +67,19 @@
           <li class="gallery__post post post--popular">
             <div class="post__content">
               <a class="post__link">
-                <img class="post__image" src="img/photo-1-mobile.jpg" width="280" height="280"
-                  alt="Изображение дороги на закате солнца"></a>
+                <picture>
+                  <source media="(min-width: 1280px)" srcset="
+                      img/photo-1-desktop.jpg  1x,
+                      img/photo-1-desktop@2x.jpg 2x
+                    " />
+                  <source media="(min-width: 768px)" srcset="
+                      img/photo-1-tablet@1x.jpg   1x,
+                      img/photo-1-tablet@2x.jpg 2x
+                    " />
+                  <img class="post__image" src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg 2x"
+                    width="280" height="280" alt="Изображение дороги на закате" />
+                </picture>
+              </a>
               <div class="post__description">
                 <div class="post__text-box">
                   <div class="post__text">
@@ -67,47 +87,39 @@
                       Неродные просторы
                     </h3>
                     <p class="post__author">Автор фото: Борис</p>
-                  </div>
-                  <div class="post__like">
-                    <a class="post__like-link" href="#">
-                      <div class="post__like-icon">
-                        <svg aria-hidden="true" focusable="false" width="23" height="21" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path opacity=".3"
-                            d="m12.964 3.78-.628 3.045-.627 2.625h9.096v2.205L17.773 18.9h-9.41V8.4l4.6-4.62ZM2.09 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.418.315-.627.84-.627 1.47v10.5c0 1.155.94 2.1 2.09 2.1h9.41c.836 0 1.568-.525 1.881-1.26l3.137-7.455c.104-.21.104-.525.104-.735v-2.1H23c0-1.155-.94-2.1-2.09-2.1h-6.587l1.045-4.83v-.315c0-.42-.209-.84-.418-1.155L13.8 0ZM4.182 8.4H0V21h4.182V8.4Z"
-                            fill="#000" />
+                    </div>
+                    <div class="post__like">
+                      <a class="post__like-link" href="#">
+                        <svg class="post__like-icon" width="23" height="21">
+                          <use xlink:href="#icon-like"></use>
                         </svg>
-                      </div>
-                    </a>
-                    <span class="post__like-count">1350</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="gallery__post post">
-            <div class="post__content">
-              <a class="post__link">
-                <img class="post__image" src="img/photo-2-mobile.jpg" width="280" height="280"
-                  alt="Изображение кактуса с желтыми цветами"></a>
-              <div class="post__description">
-                <div class="post__text-box">
-                  <div class="post__text">
+                      </a>
+                      <span class="post__like-count">1350</span>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </li>
+                    <li class="gallery__post post">
+                      <div class="post__content">
+                        <a class="post__link">
+                          <img class="post__image" src="img/photo-2-mobile.jpg" width="280" height="280"
+                            alt="Изображение кактуса с желтыми цветами"></a>
+                        <div class="post__description">
+                          <div class="post__text-box">
+                            <div class="post__text">
                     <h3 class="post__title">
                       Местная растительность
                     </h3>
                     <p class="post__author">Автор фото: Сергей</p>
                   </div>
-                  <div class="post__like like">
+                  <div class="post__like">
                     <a class="post__like-link" href="#">
-                      <div class="post__like-icon">
-                        <svg aria-hidden="true" focusable="false" width="23" height="21" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path opacity=".3"
-                            d="m12.964 3.78-.628 3.045-.627 2.625h9.096v2.205L17.773 18.9h-9.41V8.4l4.6-4.62ZM2.09 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.418.315-.627.84-.627 1.47v10.5c0 1.155.94 2.1 2.09 2.1h9.41c.836 0 1.568-.525 1.881-1.26l3.137-7.455c.104-.21.104-.525.104-.735v-2.1H23c0-1.155-.94-2.1-2.09-2.1h-6.587l1.045-4.83v-.315c0-.42-.209-.84-.418-1.155L13.8 0ZM4.182 8.4H0V21h4.182V8.4Z"
-                            fill="#000" />
+                      <a class="post__like-link" href="#">
+                        <svg class="post__like-icon" width="23" height="21">
+                          <use xlink:href="#icon-like"></use>
                         </svg>
-                      </div>
+                      </a>
                     </a>
                     <span class="post__like-count">143</span>
                   </div>
@@ -130,14 +142,9 @@
                   </div>
                   <div class="post__like like">
                     <a class="post__like-link" href="#">
-                      <div class="post__like-icon">
-                        <svg aria-hidden="true" focusable="false" width="23" height="21" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path opacity=".3"
-                            d="m12.964 3.78-.628 3.045-.627 2.625h9.096v2.205L17.773 18.9h-9.41V8.4l4.6-4.62ZM2.09 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.418.315-.627.84-.627 1.47v10.5c0 1.155.94 2.1 2.09 2.1h9.41c.836 0 1.568-.525 1.881-1.26l3.137-7.455c.104-.21.104-.525.104-.735v-2.1H23c0-1.155-.94-2.1-2.09-2.1h-6.587l1.045-4.83v-.315c0-.42-.209-.84-.418-1.155L13.8 0ZM4.182 8.4H0V21h4.182V8.4Z"
-                            fill="#000" />
-                        </svg>
-                      </div>
+                      <svg class="post__like-icon" width="23" height="21">
+                        <use xlink:href="#icon-like"></use>
+                      </svg>
                     </a>
                     <span class="post__like-count">143</span>
                   </div>
@@ -148,8 +155,7 @@
           <li class="gallery__post post">
             <div class="post__content">
               <a class="post__link">
-                <img class="post__image" src="img/photo-4-mobile.jpg" width="280" height="280"
-                  alt="Изображение гор"></a>
+                <img class="post__image" src="img/photo-4-mobile.jpg" width="280" height="280" alt="Изображение гор"></a>
               <div class="post__description">
                 <div class="post__text-box">
                   <div </div class="post__text">
@@ -160,14 +166,9 @@
                   </div>
                   <div class="post__like like">
                     <a class="post__like-link" href="#">
-                      <div class="post__like-icon">
-                        <svg aria-hidden="true" focusable="false" width="23" height="21" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path opacity=".3"
-                            d="m12.964 3.78-.628 3.045-.627 2.625h9.096v2.205L17.773 18.9h-9.41V8.4l4.6-4.62ZM2.09 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.418.315-.627.84-.627 1.47v10.5c0 1.155.94 2.1 2.09 2.1h9.41c.836 0 1.568-.525 1.881-1.26l3.137-7.455c.104-.21.104-.525.104-.735v-2.1H23c0-1.155-.94-2.1-2.09-2.1h-6.587l1.045-4.83v-.315c0-.42-.209-.84-.418-1.155L13.8 0ZM4.182 8.4H0V21h4.182V8.4Z"
-                            fill="#000" />
-                        </svg>
-                      </div>
+                      <svg class="post__like-icon" width="23" height="21">
+                        <use xlink:href="#icon-like"></use>
+                      </svg>
                     </a>
                     <span class="post__like-count">254</span>
                   </div>
@@ -175,7 +176,7 @@
               </div>
             </div>
           </li>
-        </ul>
+          </ul>
       </div>
     </section>
     <section class="gallery-video">
@@ -184,7 +185,20 @@
         <p class="gallery-video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
           очередной раз!</p>
       </div>
-      <div class="gallery-video__player"> <img src="img/video-mobile.jpg" alt="Player" width="280" height="177"> </div>
+      <div class="gallery-video__player">
+        <picture>
+          <source media="(min-width: 1280px)" srcset="
+            img/video-desktop@1x.jpg  1x,
+            img/video-desktop@2x.jpg 2x
+          " />
+          <source media="(min-width: 768px)" srcset="
+            img/video-tablet@1x.jpg   1x,
+            img/video-tablet@2x.jpg 2x
+          " />
+          <img class="gallery-video__poster" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x" width="280"
+            height="177" alt="Включить видео" />
+        </picture>
+      </div>
     </section>
   </main>
   <footer class="main-footer">

@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Форма отзыва о Седоне</title>
   <link rel="stylesheet" href="css/style.css">
-
+  <link rel="icon" href="img/32.svg" />
+  <link rel="icon" href="img/152.svg" type="image/svg+xml" />
+  <link rel="manifest" href="manifest.webmanifest" />
 </head>
 
 <body class="page__body">
@@ -14,7 +16,7 @@
     <div class="main-header__wrapper">
       <div class="main-header__logo">
         <a class="main-header__logo-link">
-          <img class="main-header__logo-img" width="185" height="96" src="img/logo.png" alt="Логотип города Седона." />
+          <img class="main-header__logo-img" width="185" height="96" src="img/logo.svg" alt="Логотип города Седона." />
         </a>
       </div>
 
@@ -56,7 +58,7 @@
         </p>
         <form class="form__feedback feedback">
           <fieldset class="feedback__group feedback__group--person">
-            <legend class="feedback__title">Представьтесь:</legend>
+            <h4 class="feedback__title">Представьтесь:</h4>
             <div class="feedback__item person-info">
               <label class="person-info__name">Имя<sup>*</sup>:</label>
               <input class="person-info__input feedback__input" type="text" required name="name" value="Пётр" />
@@ -72,7 +74,7 @@
           </fieldset>
 
           <fieldset class="feedback__group feedback__group--person feedback__group--contacts">
-            <legend class="feedback__title">Контактная информация:</legend>
+            <h4 class="feedback__title">Контактная информация:</h4>
             <div class="feedback__item contact">
               <label class="contact__name feedback__label">Контактный телефон<sup>*</sup>:</label>
               <input class="contact__input feedback__input" type="tel" name="telephone number" required
@@ -86,63 +88,70 @@
           </fieldset>
 
           <fieldset class="feedback__group">
-            <legend class="feedback__title">Ваше oбщее впечатление:</legend>
-            <ul class="feedback__list control feedback__radio">
-              <li class="feedback__item control__item">
-                <label class="control__label radio">
-                  <input class="control__input" type="radio" name="impression" value="positive" checked />
-                  <span class="control__text">Скорее положительное</span>
+            <h4 class="feedback__title">Ваше oбщее впечатление:</h4>
+            <ul class="feedback__list radio">
+              <li class="radio__item">
+                <label class="radio__label">
+                  <input class="radio__input visually-hidden" type="radio" name="impression" value="positive" checked />
+                  <span class="radio__text"></span>
+                  Скорее положительное
                 </label>
               </li>
-              <li class="feedback__item control__item">
-                <label class="control__label radio">
-                  <input class="control__input" type="radio" name="impression" value="negative" />
-                  <span class="control__text">Скорее отрицательное</span>
+              <li class="radio__item">
+                <label class="radio__label">
+                  <input class="radio__input visually-hidden" type="radio" name="impression" value="negative" />
+                  <span class="radio__text"></span>
+                  Скорее отрицательное
                 </label>
               </li>
-              <li class="feedback__item control__item">
-                <label class="control__label radio">
-                  <input class="control__input" type="radio" name="impression" value="no reply" />
-                  <span class="control__text">Затрудняюсь ответить</span>
+              <li class="radio__item">
+                <label class="radio__label">
+                  <input class="radio__input visually-hidden" type="radio" name="impression" value="no reply" />
+                  <span class="radio__text"></span>
+                  Затрудняюсь ответить
                 </label>
               </li>
             </ul>
           </fieldset>
 
           <fieldset class="feedback__group">
-            <legend class="feedback__title">
+            <h4 class="feedback__title">
               Посещенные достопримечательности:
-            </legend>
-            <ul class="feedback__list control feedback__checkbox">
-              <li class="feedback__item">
-                <label class="control__label checkbox">
-                  <input class="control__input" type="checkbox" name="landmark" value="bridge" checked />
-                  <span class="control__text">Мост Дьявола</span>
+            </h4>
+            <ul class="feedback__list checkbox">
+              <li class="checkbox__item">
+                <label class="checkbox__label">
+                  <input class="checkbox__input visually-hidden" type="checkbox" name="visited" value="bridge" checked />
+                  <span class="checkbox__text"></span>
+                  Мост Дьявола
                 </label>
               </li>
-              <li class="feedback__item">
-                <label class="control__label checkbox">
-                  <input class="control__input" type="checkbox" name="landmark" value="mountain" checked />
-                  <span class="control__text">Гора-Колокол</span>
+              <li class="checkbox__item">
+                <label class="checkbox__label">
+                  <input class="checkbox__input visually-hidden" type="checkbox" name="visited" value="mountain" checked />
+                  <span class="checkbox__text"></span>
+                  Гора-Колокол
                 </label>
               </li>
-              <li class="feedback__item">
-                <label class="control__label checkbox">
-                  <input class="control__input" type="checkbox" name="landmark" value="park" checked />
-                  <span class="control__text">Слайд-парк</span>
+              <li class="checkbox__item">
+                <label class="checkbox__label">
+                  <input class="checkbox__input visually-hidden" type="checkbox" name="visited" value="park" checked />
+                  <span class="checkbox__text"></span>
+                  Слайд-парк
                 </label>
               </li>
-              <li class="feedback__item">
-                <label class="control__label checkbox">
-                  <input class="control__input" type="checkbox" name="landmark" value="rock" />
-                  <span class="control__text">Красные скалы</span>
+              <li class="checkbox__item">
+                <label class="checkbox__label">
+                  <input class="checkbox__input visually-hidden" type="checkbox" name="visited" value="scale" />
+                  <span class="checkbox__text"></span>
+                  Красные скалы
                 </label>
               </li>
             </ul>
           </fieldset>
 
           <fieldset class="feedback__group">
-            <legend class="feedback__title">Опишите свои эмоции:</legend>
+            <h4 class="feedback__title">Опишите свои эмоции:</h4>
             <textarea class="feedback__item review" name="review">
 Опишите подробно все свои восторги </textarea>
           </fieldset>
@@ -186,34 +195,23 @@
           <img class="copyright__image" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML academy">
         </a>
       </div>
-    </div>
-  </footer>
-  <div class="modal">
-    <div class="modal__wrapper">
-      <section class="modal__content modal__content--wrong">
-        <div class="modal__box">
-          <h3 class="modal__caption">Что-то пошло не так</h3>
-          <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-        </div>
-        <button class=" modal__button modal__button-ok" type="button"> Ок </button>
-      </section>
-    </div>
-  </div>
-  <div class="modal">
-    <div class="modal__wrapper">
-      <section class="modal__content modal__content--ok">
-        <div class="modal__box">
+      </div>
+      </footer>
+      <div class="modal">
+        <div class="modal__wrapper modal__wrapper--success">
           <h3 class="modal__caption">Ваш отзыв отправлен!</h3>
           <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы
             опубликуем его на сайте.</p>
+          <button class="modal__button" type="button"> Закрыть окно </button>
         </div>
-        <div class="modal__button-box">
-          <button class="modal__button modal__button--close" type="button"> Закрыть окно </button>
+      </div>
+      <div class="modal">
+        <div class="modal__wrapper">
+          <h3 class="modal__caption">Что-то пошло не так</h3>
+          <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+          <button class=" modal__button modal__button--error" type="button"> Ок </button>
         </div>
-      </section>
-    </div>
-  </div>
+      </div>
+      </body>
 
-</body>
-
-</html>
+      </html>

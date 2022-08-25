@@ -89,6 +89,17 @@
   font-size: 18px;
   margin-bottom: 35px;
   line-height: 1.44;
+  .tablet {
+    display: none;
+  }
+  @media (min-width: @tablet-width) {
+    .mobile {
+      display: none;
+    }
+    .tablet {
+      display: block;
+    }
+  }
 }
 
 .advantages__text {
@@ -135,6 +146,9 @@
   &--colored {
     padding: 0;
     color: @white;
+    .tablet {
+      display: none;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -145,6 +159,9 @@
 
     &--colored {
       width: auto;
+      .tablet {
+        display: block;
+      }
     }
   }
 

@@ -48,8 +48,35 @@
   @media (min-width: @tablet-width) {
     font-size: 21px;
     line-height: 1.24;
+    position: relative;
   }
 }
+.feedback__title::before,
+.feedback__title::after {
+  @media (min-width: @tablet-width) {
+  position: absolute;
+  content: "";
+  width: 123px;
+  height: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: @form-line;
+  }
+  @media (min-width: @desktop-width){
+    width: 280px;
+  }
+  .feedback__group--person & {
+    display: none;
+  }
+}
+.feedback__title::before {
+  left: 0;
+}
+
+.feedback__title::after {
+  right: 0;
+}
+
 
 .feedback__item {
   display: flex;
