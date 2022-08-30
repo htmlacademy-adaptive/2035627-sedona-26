@@ -7,6 +7,16 @@
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
 }
 
 .form__caption {
@@ -24,11 +34,22 @@
 .form__text {
   margin: 0;
   margin-bottom: 28px;
+
+  .tablet {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    .tablet {
+      display: block;
+    }
+  }
 }
 
 .form__button {
   .button-common();
-  padding: 18px 60px 14px 49px;
+  padding-top: 18px;
+  padding-bottom: 14px;
   margin-top: 42px;
 
   @media (min-width: @tablet-width) {
@@ -44,7 +65,8 @@
   text-align: right;
   display: block;
   margin-top: 2px;
-  @media (min-width: @tablet-width){
+
+  @media (min-width: @tablet-width) {
     font-size: @font-size-base;
     color: rgba(51, 51, 51, 1);
   }

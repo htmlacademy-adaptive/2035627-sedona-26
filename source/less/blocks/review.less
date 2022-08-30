@@ -1,7 +1,7 @@
 .review {
   width: 100%;
   border: none;
-  background-color: #f2f2f2;
+  background-color: @form-grey;
   padding: 16px;
   padding-top: 19px;
   font-weight: 700;
@@ -10,4 +10,16 @@
   color: rgba(0, 0, 0, 0.3);
   resize: none;
   min-height: 150px;
+  display: block;
+}
+
+.review:hover {
+  background-color: @grey;
+  outline: none;
+}
+
+.review:active {
+  background-color: @white;
+  outline: 4px solid @grey;
+  color: @black;
 }
