@@ -39,6 +39,12 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+@media (min-width: 1200px) {
+  .page__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
 .container {
   padding-left: 20px;
   padding-right: 20px;
@@ -196,22 +202,19 @@ body {
   }
 }
 .slogan-index__container {
-  background-color: #1f628c;
-  background-image: url("../../img/back-mobile.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: #669ec0 url("../img/back-mobile.jpg") no-repeat center / cover;
   padding-top: 90px;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
           clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .slogan-index__container {
-    background-image: url("../../img/back-mobile@2x.jpg");
+    background-image: url("../img/back-mobile@2x.jpg");
   }
 }
 @media (min-width: 768px) {
   .slogan-index__container {
-    background-image: url("../../img/back-desktop.jpg");
+    background-image: url("../img/back-index-tablet.jpg");
     padding-top: 78px;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 84%, 96% 85%, 96% 77%, 50% 96%, 4% 77%, 4% 84%, 0 84%);
             clip-path: polygon(0 0, 100% 0, 100% 84%, 96% 85%, 96% 77%, 50% 96%, 4% 77%, 4% 84%, 0 84%);
@@ -219,11 +222,21 @@ body {
 }
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
   .slogan-index__container {
-    background-image: url("../../img/back-desktop@2x.jpg");
+    background-image: url("../../img/back-index-tablet@2x.jpg");
+  }
+}
+@media (min-width: 1200px) {
+  .slogan-index__container {
+    background-image: url("../img/back-index-desktop.jpg");
+  }
+}
+@media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 2dppx) {
+  .slogan-index__container {
+    background-image: url("../img/back-index-desktop@2x.jpg");
   }
 }
 .slogan-index__box {
-  padding-bottom: 59px;
+  padding-bottom: 100px;
 }
 @media (min-width: 768px) {
   .slogan-index__box {
@@ -731,22 +744,20 @@ body {
   color: #d5d5d5;
 }
 .slogan-inner {
-  background: #669ec0 url("../../img/back-mobile.jpg");
+  background: #669ec0 url("../img/back-mobile.jpg") no-repeat center bottom / cover;
   padding-top: 52px;
   padding-bottom: 62px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
   -webkit-clip-path: polygon(0 0, 100% 1%, 100% 90%, 50% 100%, 0 90%);
           clip-path: polygon(0 0, 100% 1%, 100% 90%, 50% 100%, 0 90%);
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .slogan-inner {
-    background-image: url("../../img/back-mobile@2x.jpg");
+    background-image: url("../img/back-mobile@2x.jpg");
   }
 }
 @media (min-width: 768px) {
   .slogan-inner {
+    background-image: url("../img/back-tablet.jpg");
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 84%, 96% 85%, 96% 77%, 50% 96%, 4% 77%, 4% 84%, 0 84%);
             clip-path: polygon(0 0, 100% 0, 100% 84%, 96% 85%, 96% 77%, 50% 96%, 4% 77%, 4% 84%, 0 84%);
     padding-top: 93px;
@@ -755,7 +766,17 @@ body {
 }
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
   .slogan-inner {
-    background-image: url("../../img/back-desktop@2x.jpg");
+    background-image: url("../img/back-tablet@2x.jpg");
+  }
+}
+@media (min-width: 1200px) {
+  .slogan-inner {
+    background-image: url("../img/back-desktop.jpg");
+  }
+}
+@media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 2dppx) {
+  .slogan-inner {
+    background-image: url("../img/back-desktop@2x.jpg");
   }
 }
 .slogan-inner__image {
@@ -895,10 +916,10 @@ body {
   background-position: center;
 }
 .feedback__input-icon--tel {
-  background-image: url("../../img/phone.svg");
+  background-image: url("../img/phone.svg");
 }
 .feedback__input-icon--mail {
-  background-image: url("../../img/mail.svg");
+  background-image: url("../img/mail.svg");
 }
 .feedback__label {
   margin-left: 16px;
@@ -1128,7 +1149,7 @@ body {
   width: 22px;
   height: 22px;
   position: absolute;
-  background-image: url("../../img/tick.svg.svg");
+  background-image: url("../img/tick.svg");
   background-repeat: no-repeat;
   top: 50%;
   left: 50%;
