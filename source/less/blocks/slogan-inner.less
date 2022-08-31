@@ -1,17 +1,15 @@
 .slogan-inner {
-  background: @dark-blue url("../../img/back-mobile.jpg");
+  background: @dark-blue url("../img/back-mobile.jpg") no-repeat center bottom/cover;
   padding-top: 52px;
   padding-bottom: 62px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
   clip-path: polygon(0 0, 100% 1%, 100% 90%, 50% 100%, 0 90%);
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../img/back-mobile@2x.jpg");
+    background-image: url("../img/back-mobile@2x.jpg");
   }
 
   @media (min-width: @tablet-width) {
+    background-image: url("../img/back-tablet.jpg");
     clip-path: polygon(
       0 0,
       100% 0,
@@ -27,7 +25,15 @@
     padding-bottom: 130px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/back-desktop@2x.jpg");
+      background-image: url("../img/back-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/back-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-desktop@2x.jpg");
     }
   }
 }
