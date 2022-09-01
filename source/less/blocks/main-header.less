@@ -1,81 +1,73 @@
 .main-header {
   position: relative;
   background-color: @white;
+  min-height: 56px;
+}
 
-  &--inner {
-    z-index: 1;
-
-    @media (min-width: @tablet-width) {
-      padding-left: 28px;
-      padding-right: 28px;
-    }
-  }
+.main-header__logo {
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 0;
 }
 
 .main-header--opened .main-header__dropdown {
-  display: none;
+  display: block;
+  z-index: 2;
 }
 
+.main-header--opened .main-header__logo {
+  z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    z-index: 3;
+  }
+}
 
 .main-header__wrapper {
   text-align: right;
+  padding-top: 14px;
+  padding-bottom: 17px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     display: flex;
+    padding-top: 9px;
+    padding-left: 3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+    padding-left: 0;
   }
 }
 
 .main-header__dropdown {
   display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 
   @media (min-width: @tablet-width) {
     display: block;
-    padding-top: 10px;
-    padding-bottom: 16px;
     width: 100%;
+    position: relative;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 7px;
+    padding-top: 9px;
   }
 }
 
-.main-header__logo {
-  position: absolute;
-  z-index: 1;
-  left: 50%;
-  transform: translate(-50%);
-}
-
-.main-header__toggle {
-  margin-top: 17px;
-  margin-bottom: 17px;
-  cursor: pointer;
-  margin-right: 20px;
-  position: relative;
-  width: 23px;
-  height: 23px;
-  background-color: inherit;
-  border: none;
-
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-}
-
-.main-header__toggle--closed::before {
-  content: "";
-  width: 23px;
-  height: 4px;
-  position: absolute;
+.no-js .main-header__dropdown {
   display: block;
-  top: 0;
-  left: 0;
-  background-color: @blue;
-  box-shadow: 0 9px 0 0 @blue, 0 18px 0 0 @blue;
+  position: static;
+  margin-top: 90px;
+  padding-bottom: 0;
+}
 
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
+.no-js .main-header__wrapper {
+  padding-bottom: 0;
 }
