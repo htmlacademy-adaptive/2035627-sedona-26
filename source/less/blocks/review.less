@@ -1,4 +1,5 @@
 .review {
+  cursor: text;
   width: 100%;
   border: none;
   background-color: @form-grey;
@@ -8,10 +9,19 @@
   font-size: 18px;
   font-family: @font-family-base;
   line-height: 1.44;
-  color: rgba(0, 0, 0, 0.3);
   resize: none;
   min-height: 150px;
   display: block;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .review:hover {
@@ -19,8 +29,15 @@
   outline: none;
 }
 
-.review:active {
+.review:focus {
   background-color: @white;
   outline: 4px solid @grey;
+}
+
+.review:focus .review::placeholder {
   color: @black;
+}
+
+.review::placeholder {
+  color: rgba(0, 0, 0, 0.3);
 }

@@ -10,10 +10,11 @@
 }
 
 .feedback__group {
+  position: relative;
   border: none;
   padding: 0;
   margin: 0;
-  margin-top: 29px;
+  margin-top: -6px;
 
   @media (min-width: @tablet-width) {
     width: 100%;
@@ -24,18 +25,23 @@
     }
 
     &--contacts {
-      padding-left: 40px;
+      padding-left: 43px;
       width: 50%;
       align-self: flex-start;
     }
 
     &:first-child {
-      padding-right: 40px;
       border-right: 2px solid @form-grey;
     }
 
     &:last-of-type {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:first-child {
+      padding-right: 46px;
     }
   }
 }
@@ -46,12 +52,25 @@
   line-height: 1.44;
   text-align: center;
   margin-top: 0;
-  margin-bottom: 28px;
+  margin-bottom: 18px;
 
   @media (min-width: @tablet-width) {
     font-size: 21px;
     line-height: 1.24;
     position: relative;
+    margin-bottom: 28px;
+  }
+}
+
+.feedback__group--contacts .feedback__title {
+  @media (min-width: @tablet-width) {
+    margin-left: -36px;
+  }
+}
+
+.feedback__group--person .feedback__title {
+  @media (min-width: @desktop-width) {
+    margin-left: 50px;
   }
 }
 
@@ -94,22 +113,46 @@
   margin-bottom: 16px;
 }
 
+.feedback__item:last-child:not(:first-child) {
+  margin-bottom: 74px;
+}
+
+.feedback__item:last-child {
+  @media (max-width: 767px) {
+    margin-bottom: 72px;
+  }
+}
+
+.feedback__group--contacts .feedback__item {
+  @media (min-width: @desktop-width) {
+    margin-left: 42px;
+  }
+}
+
+.feedback__group--contacts .feedback__item:last-child {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 160px;
+  }
+}
+
 .feedback__input {
+  cursor: text;
   width: 100%;
   padding: 16px;
   border: none;
   background-color: @form-grey;
   font-weight: 700;
+  font-family: @font-family-base;
   font-size: 18px;
   line-height: 1.44;
 
-  &:hover {
-    outline: none;
-    background-color: @grey;
+  @media (min-width: @tablet-width) {
+    margin-right: 40px;
+    padding-top: 18px;
+  }
 
-    &::placeholder {
-      color: @black;
-    }
+  @media (min-width: @desktop-width) {
+    margin: 0;
   }
 }
 
@@ -148,4 +191,33 @@
 
 .feedback__label {
   margin-left: 16px;
+}
+
+.feedback__group::after {
+  content: "";
+  height: 1px;
+  background-color: @form-grey;
+  width: 100vw;
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.feedback__input:hover {
+  outline: none;
+  background-color: @grey;
+}
+
+.feedback__input:active {
+  outline: 4px solid @grey;
+  background-color: @white;
+}
+
+.feedback__group--person .feedback__input::placeholder {
+  color: @black;
 }
