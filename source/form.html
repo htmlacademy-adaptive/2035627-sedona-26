@@ -37,17 +37,12 @@
     <header class="main-header">
       <div class="main-header__wrapper">
         <div class="main-header__logo">
-          <a class="main-header__logo-link">
+          <a class="main-header__logo-link" href="index.html">
             <img class="main-header__logo-img" width="185" height="96" src="img/logo.svg"
               alt="Логотип города Седона." />
           </a>
         </div>
-        <input id="toggle" class="toggle visually-hidden" type="checkbox" />
-        <label for="toggle" class="main-header__toggle burger">
-          <span class="burger__line burger__line--top"></span>
-          <span class="burger__line burger__line--middle"></span>
-          <span class="burger__line burger__line--bottom"></span>
-        </label>
+        <button id="toggle" class="burger"><span class="visually-hidden"> Открыть меню </span></button>
         <div class="main-header__dropdown">
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -71,30 +66,32 @@
       <section class="slogan-inner">
         <h1 class="visually-hidden">Фото и видео</h1>
         <div class="slogan-inner__box">
-          <img class="slogan-inner__image" src="img/slogan-inner.svg" width="282" height="158" alt="Sedona">
+          <img class="slogan-inner__image" src="img/slogan-inner.svg" width="229" height="39" alt="Sedona">
         </div>
       </section>
-      <section class ="form__content">
+      <section class="form__content">
         <div class="form__wrapper">
-          <h3 class="form__caption">Оставьте свой отзыв</h3>
-          <p class="form__text">
-            Помогите нашим отелям стать лучше! оставьте отзыв о них, <br class="tablet">
-            а также о посещенных вами достопримечательностях.
-          </p>
+          <div class="form__box">
+            <h3 class="form__caption">Оставьте свой отзыв</h3>
+            <p class="form__text">
+              <span class="form__wrap">Помогите нашим отелям стать лучше! оставьте отзыв о них, </span>
+              а также о посещенных вами достопримечательностях.
+            </p>
+          </div>
           <form class="form__feedback feedback">
             <fieldset class="feedback__group feedback__group--person">
               <h4 class="feedback__title">Представьтесь:</h4>
               <div class="feedback__item">
                 <label class="feedback__label">Имя<sup>*</sup>:</label>
-                <input class="feedback__input" type="text" required name="name" value="Пётр" />
+                <input class="feedback__input" type="text" required name="name" placeholder="Пётр" />
               </div>
               <div class="feedback__item">
                 <label class="feedback__label">Фамилия<sup>*</sup>:</label>
-                <input class="feedback__input" type="text" required name="surname" value="Пустота" />
+                <input class="feedback__input" type="text" required name="surname" placeholder="Пустота" />
               </div>
               <div class="feedback__item">
                 <label class="feedback__label">Отчество:</label>
-                <input class="feedback__input" type="text" name="middle name" value="Викторович" />
+                <input class="feedback__input" type="text" name="middle name" placeholder="Викторович" />
               </div>
             </fieldset>
 
@@ -122,7 +119,7 @@
               <ul class="feedback__list radio">
                 <li class="radio__item">
                   <label class="radio__label">
-                    <input class="radio__input visually-hidden" type="radio" name="impression" value="positive"
+                    <input class="radio__input visually-hidden" type="radio" name="impression" placeholder="positive"
                       checked />
                     <span class="radio__text"></span>
                     Скорее положительное
@@ -130,14 +127,14 @@
                 </li>
                 <li class="radio__item">
                   <label class="radio__label">
-                    <input class="radio__input visually-hidden" type="radio" name="impression" value="negative" />
+                    <input class="radio__input visually-hidden" type="radio" name="impression" placeholder="negative" />
                     <span class="radio__text"></span>
                     Скорее отрицательное
                   </label>
                 </li>
                 <li class="radio__item">
                   <label class="radio__label">
-                    <input class="radio__input visually-hidden" type="radio" name="impression" value="no reply" />
+                    <input class="radio__input visually-hidden" type="radio" name="impression" placeholder="no reply" />
                     <span class="radio__text"></span>
                     Затрудняюсь ответить
                   </label>
@@ -152,7 +149,7 @@
               <ul class="feedback__list checkbox">
                 <li class="checkbox__item">
                   <label class="checkbox__label">
-                    <input class="checkbox__input visually-hidden" type="checkbox" name="visited" value="bridge"
+                    <input class="checkbox__input visually-hidden" type="checkbox" name="visited" placeholder="bridge"
                       checked />
                     <span class="checkbox__text"></span>
                     Мост Дьявола
@@ -160,7 +157,7 @@
                 </li>
                 <li class="checkbox__item">
                   <label class="checkbox__label">
-                    <input class="checkbox__input visually-hidden" type="checkbox" name="visited" value="mountain"
+                    <input class="checkbox__input visually-hidden" type="checkbox" name="visited" placeholder="mountain"
                       checked />
                     <span class="checkbox__text"></span>
                     Гора-Колокол
@@ -168,7 +165,7 @@
                 </li>
                 <li class="checkbox__item">
                   <label class="checkbox__label">
-                    <input class="checkbox__input visually-hidden" type="checkbox" name="visited" value="park"
+                    <input class="checkbox__input visually-hidden" type="checkbox" name="visited" placeholder="park"
                       checked />
                     <span class="checkbox__text"></span>
                     Слайд-парк
@@ -176,7 +173,7 @@
                 </li>
                 <li class="checkbox__item">
                   <label class="checkbox__label">
-                    <input class="checkbox__input visually-hidden" type="checkbox" name="visited" value="scale" />
+                    <input class="checkbox__input visually-hidden" type="checkbox" name="visited" placeholder="scale" />
                     <span class="checkbox__text"></span>
                     Красные скалы
                   </label>
