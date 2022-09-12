@@ -86,3 +86,21 @@
     margin-left: auto;
   }
 }
+
+.main-nav__item:last-child {
+  position: relative;
+}
+
+.main-nav__item:last-child::after {
+  content: "";
+  height: 7px;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+  bottom: 0;
+  left: 0;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
