@@ -28,8 +28,11 @@ export const styles = () => {
 
 // HTML
 
- export const html = () => {
-  return gulp.src("source/*.html").pipe(htmlmin({collapseWhitespace: true})).pipe(gulp.dest("build"));
+export const html = () => {
+  return gulp
+    .src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"));
 };
 
 // Scripts
@@ -91,9 +94,16 @@ const sprite = () => {
 
 export const copy = (done) => {
   gulp
-    .src(["source/fonts/*.{woff2,woff}", "source/*.ico", "source/manifest.webmanifest"], {
-      base: "source",
-    })
+    .src(
+      [
+        "source/fonts/*.{woff2,woff}",
+        "source/*.ico",
+        "source/manifest.webmanifest",
+      ],
+      {
+        base: "source",
+      }
+    )
     .pipe(gulp.dest("build"));
   done();
 };
