@@ -60,6 +60,10 @@
     position: relative;
     margin-bottom: 28px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 28px;
+  }
 }
 
 .feedback__group--contacts .feedback__title {
@@ -70,7 +74,7 @@
 
 .feedback__group--person .feedback__title {
   @media (min-width: @desktop-width) {
-    margin-left: 50px;
+    margin-left: 55px;
   }
 }
 
@@ -125,13 +129,18 @@
 
 .feedback__group--contacts .feedback__item {
   @media (min-width: @desktop-width) {
-    margin-left: 42px;
+    margin-left: 36px;
+    margin-top: -3px;
   }
 }
 
 .feedback__group--contacts .feedback__item:last-child {
   @media (min-width: @tablet-width) {
     margin-bottom: 160px;
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 174px;
+    }
   }
 }
 
@@ -153,6 +162,7 @@
 
   @media (min-width: @desktop-width) {
     margin: 0;
+    padding-top: 16px;
   }
 }
 
