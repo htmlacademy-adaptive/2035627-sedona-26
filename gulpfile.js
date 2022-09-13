@@ -11,6 +11,7 @@ import svgo from "gulp-svgmin";
 import svgstore from "gulp-svgstore";
 import del from "del";
 import browser from "browser-sync";
+import htmlmin from "gulp-htmlmin";
 
 // Styles
 
@@ -19,7 +20,7 @@ export const styles = () => {
     .src("source/less/style.less", { sourcemaps: true })
     .pipe(plumber())
     .pipe(less())
-    .pipe(postcss([autoprefixer()]))
+    .pipe(postcss([autoprefixer(), csso()]))
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css", { sourcemaps: "." }))
     .pipe(browser.stream());
@@ -27,8 +28,11 @@ export const styles = () => {
 
 // HTML
 
-const html = () => {
-  return gulp.src("source/*.html").pipe(gulp.dest("build"));
+export const html = () => {
+  return gulp
+    .src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"));
 };
 
 // Scripts
@@ -90,9 +94,16 @@ const sprite = () => {
 
 export const copy = (done) => {
   gulp
-    .src(["source/fonts/*.{woff2,woff}", "source/*.ico", "source/manifest.webmanifest"], {
-      base: "source",
-    })
+    .src(
+      [
+        "source/fonts/*.{woff2,woff}",
+        "source/*.ico",
+        "source/manifest.webmanifest",
+      ],
+      {
+        base: "source",
+      }
+    )
     .pipe(gulp.dest("build"));
   done();
 };
