@@ -60,3 +60,21 @@
 .no-js .burger {
   display: none;
 }
+
+.burger:active {
+  background-color: fade(@blue, 30%);
+}
+
+.burger:hover {
+  background-color: fade(@blue, 60%);
+}
+
+.burger:active .burger::after,
+.burger:active .burger::before {
+  background-color: fade(@white, 30%);
+}
+
+.burger:hover .burger::after,
+.burger:hover .burger::before {
+  background-color: fade(@white, 60%);
+}
