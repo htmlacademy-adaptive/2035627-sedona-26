@@ -773,6 +773,10 @@ html {
   border: none;
   width: 100%;
 }
+.adress__map--nojs {
+  background-color: rgba(255, 215, 170, 0.8);
+  width: 100%;
+}
 .main-footer {
   background-color: #ffffff;
 }
@@ -856,6 +860,7 @@ html {
   margin-left: 3px;
 }
 .social__icon {
+  fill: #ffffff;
   align-self: center;
 }
 .social__link:hover {
@@ -894,6 +899,9 @@ html {
 }
 .copyright__link:active {
   color: #d5d5d5;
+}
+.copyright__logo {
+  fill: currentColor;
 }
 .slogan-inner {
   background-color: #ffffff;
@@ -1148,7 +1156,7 @@ html {
   outline: none;
   background-color: #e5e5e5;
 }
-.feedback__input:active {
+.feedback__input:focus {
   outline: 4px solid #e5e5e5;
   background-color: #ffffff;
 }
@@ -1446,6 +1454,7 @@ html {
   }
 }
 .checkbox__label {
+  cursor: pointer;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.44;
@@ -1488,7 +1497,7 @@ html {
 .checkbox__label:focus .checkbox__button {
   background-color: #d5d5d5;
 }
-.checkbox__label:focus-within .checkbox__button::before {
+.checkbox__label:focus .checkbox__button::before {
   opacity: 0.3;
 }
 .checkbox__label:focus-within .checkbox__button {
@@ -1668,7 +1677,6 @@ html {
   .post__image {
     min-height: 260px;
     grid-row: 1/3;
-    width: 400px;
     height: 267px;
     padding-bottom: 0;
   }
@@ -1759,6 +1767,7 @@ html {
   }
 }
 .post__like-icon {
+  fill: #000000;
   opacity: 0.3;
   margin-right: 4px;
 }
@@ -2046,5 +2055,19 @@ html {
 }
 .no-js .burger {
   display: none;
+}
+.burger:active {
+  background-color: rgba(129, 179, 210, 0.3);
+}
+.burger:hover {
+  background-color: rgba(129, 179, 210, 0.6);
+}
+.burger:active .burger::after,
+.burger:active .burger::before {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.burger:hover .burger::after,
+.burger:hover .burger::before {
+  background-color: rgba(255, 255, 255, 0.6);
 }
 /*# sourceMappingURL=style.min.css.map */

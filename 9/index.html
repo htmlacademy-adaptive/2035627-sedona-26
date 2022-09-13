@@ -89,14 +89,14 @@
               </div>
               <ul class=" advantages__subitem subitem">
                 <li class="subitem__item">
-                  <svg class="subitem__icon" width="39" height="37">
+                  <svg class="subitem__icon" width="39" height="37" viewBox="0 0 39 37">
                     <use xlink:href="img/sprite.svg#icon-house"></use>
                   </svg>
                   <h3 class="subitem__title">Жилье</h3>
                   <p class="subitem__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                 </li>
                 <li class="subitem__item">
-                  <svg class="subitem__icon" width="40" height="35">
+                  <svg class="subitem__icon" width="40" height="35" viewBox="0 0 40 35">
                     <use xlink:href="img/sprite.svg#icon-burger"></use>
                   </svg>
                   <h3 class="subitem__title">Еда</h3>
@@ -104,7 +104,7 @@
                       Вы не разочаруетесь!</span></p>
                 </li>
                 <li class="subitem__item">
-                  <svg class="subitem__icon" width="32" height="38">
+                  <svg class="subitem__icon" width="32" height="38" viewBox="0 0 32 38">
                     <use xlink:href="img/sprite.svg#icon-gift"></use>
                   </svg>
                   <h3 class="subitem__title">Сувениры</h3>
@@ -177,6 +177,18 @@
             width="320" height="350" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
+          <picture>
+            <source media="(min-width: 1280px)" srcset="
+              img/map-desktop.jpg  1x,
+              img/map-desktop@2x.jpg 2x
+            " />
+            <source media="(min-width: 768px)" srcset="
+              img/map-tablet.jpg   1x,
+              img/map-tablet@2x.jpg 2x
+            " />
+            <img class="adress__map--nojs" id="map" src="img/map-mobile.jpg"
+              srcset="map-mobile@2x.jpg 2x" width="320" height="350" alt="Карта с адресом города Седона." />
+          </picture>
         </div>
       </section>
     </main>
@@ -191,7 +203,7 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
-                <svg class="social__icon" width="24" height="14">
+                <svg class="social__icon" width="24" height="14" viewBox="0 0 24 14">
                   <use xlink:href="img/sprite.svg#icon-vk"></use>
                 </svg>
                 <span class="visually-hidden">Мы в Вконтакте</span>
@@ -199,7 +211,7 @@
             </li>
             <li class="social__item">
               <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
-                <svg class="social__icon" width="22" height="18">
+                <svg class="social__icon" width="22" height="18" viewBox="0 0 22 18">
                   <use xlink:href="img/sprite.svg#icon-tg"></use>
                 </svg>
                 <span class="visually-hidden">Мы в Телеграме</span>
@@ -207,7 +219,7 @@
             </li>
             <li class="social__item">
               <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-                <svg class="social__icon" width="20" height="14">
+                <svg class="social__icon" width="20" height="14" viewBox="0 0 20 14">
                   <use xlink:href="img/sprite.svg#icon-youtube"></use>
                 </svg>
                 <span class="visually-hidden">Мы в Ютубе </span></a>
@@ -217,7 +229,7 @@
         <div class="main-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <p class="copyright__text">Разработано:</p>
-            <svg class="copyright__logo" width="27" height="35">
+            <svg class="copyright__logo" width="27" height="35" viewBox="0 0 27 35">
               <use xlink:href="./img/sprite.svg#htmlacademy"></use>
             </svg>
           </a>
