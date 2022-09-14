@@ -24,7 +24,7 @@
           </a>
         </div>
         <button id="toggle" class="burger"><span class="visually-hidden"> Открыть меню </span></button>
-        <div class="main-header__dropdown">
+        <div class="main-header__dropdown main-nav">
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link link main-nav__link--current">Главная</a>
@@ -199,8 +199,8 @@
               img/map-tablet.jpg   1x,
               img/map-tablet@2x.jpg 2x
             " />
-            <img class="adress__map--nojs" id="map" src="img/map-mobile.jpg" srcset="img/map-mobile@2x.jpg 2x"
-              width="320" height="350" alt="Карта с адресом города Седона." />
+            <img class="adress__image adress__image--nojs" id="map" src="img/map-mobile.jpg"
+              srcset="img/map-mobile@2x.jpg 2x" width="320" height="350" alt="Карта с адресом города Седона." />
           </picture>
         </div>
       </section>
@@ -249,8 +249,10 @@
         </div>
       </div>
     </footer>
+
     <script src="./js/script.js" defer></script>
     <script src="./js/map.js" defer></script>
+
   </div>
 </body>
 
