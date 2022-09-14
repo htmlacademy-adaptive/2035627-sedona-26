@@ -20,22 +20,22 @@
 .burger::before,
 .burger::after {
   content: "";
-  position: relative;
+  position: absolute;
   display: block;
-  width: 26px;
+  width: 25px;
   height: 5px;
   background-color: @white;
 }
 
 .burger::before {
-  top: 7px;
-  left: -7px;
+  top: 4px;
+  left: 0;
   transition: all 0.2s ease-in-out;
 }
 
 .burger::after {
-  bottom: 7px;
-  left: -7px;
+  bottom: 4px;
+  left: 0;
   transition: all 0.2s ease-in-out;
 }
 
@@ -45,16 +45,14 @@
 
 .main-header--opened .burger::after {
   transform: rotate(-45deg);
-  bottom: 2px;
+  bottom: 10px;
   height: 4px;
-  width: 23px;
 }
 
 .main-header--opened .burger::before {
   transform: rotate(45deg);
-  top: 3px;
+  top: 8px;
   height: 4px;
-  width: 23px;
 }
 
 .no-js .burger {

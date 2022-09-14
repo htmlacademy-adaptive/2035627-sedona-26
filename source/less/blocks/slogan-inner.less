@@ -3,17 +3,18 @@
 }
 
 .slogan-inner__box {
-  background: @dark-blue url("../img/back-mobile-inner@1x.jpg") no-repeat center bottom/cover;
+  background: @dark-blue url("../img/back-mobile-inner@1x.webp") no-repeat
+    center bottom/cover;
   padding-top: 52px;
   padding-bottom: 62px;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/back-mobile-inner@2x.jpg");
+    background-image: url("../img/back-mobile-inner@2x.webp");
   }
 
   @media (min-width: @tablet-width) {
-    background-image: url("../img/back-tablet.jpg");
+    background-image: url("../img/back-tablet.webp");
     clip-path: polygon(
       0 0,
       100% 0,
@@ -29,12 +30,12 @@
     padding-bottom: 130px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/back-tablet@2x.jpg");
+      background-image: url("../img/back-tablet@2x.webp");
     }
   }
 
   @media (min-width: @desktop-width) {
-    background-image: url("../img/back-desktop.jpg");
+    background-image: url("../img/back-desktop.webp");
     clip-path: polygon(
       0 0,
       100% 0,
@@ -50,7 +51,7 @@
     padding-bottom: 112px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/back-desktop@2x.jpg");
+      background-image: url("../img/back-desktop@2x.webp");
     }
   }
 }
